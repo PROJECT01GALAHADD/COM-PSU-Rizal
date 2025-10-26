@@ -1,0 +1,73 @@
+See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnpm-store
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files
+.env*
+!.env.example
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# project specific
+/.bevel
+/database
+/logs
+/templates
+/DocuGenius
+/.qwen
+/.cursor
+/bin
+/scripts/replit/prybar/
+
+# IDE and editor specific
+.vscode/
+.frontmatter/
+.trae/
+
+# Cache directories
+.cache/
+.local/
+.config/
+.upm/
+.pnpm-store/
+.next/
+
+# Large documents
+docs/thesis/*.docx
+docs/thesis/*.pdf
+
+# Replit specific
+.replit.nix
+
+# Unnecessary root files
+start-app.bat
+*.code-workspace
+DEPLOY_NOW.sh
+files
+generated-icon.png
+
+# OpenMemory - IDE/Assistant specific rules
+.trae/rules/openmemory.md
+
+# Exclude backup repo
+.git.old/

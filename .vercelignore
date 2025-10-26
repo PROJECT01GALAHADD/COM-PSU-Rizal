@@ -1,0 +1,30 @@
+# .vercelignore - Files to exclude from Vercel deployment
+
+# Documentation
+/docs
+*.md
+README.md
+AGENTS.md
+*.docx
+
+# Database (not needed for cloud deployment)
+/database
+
+# Scripts
+/scripts/db-init
+/scripts/docker-compose*
+/scripts/nocodb-seed.sh
+/scripts/supabase-seed.sh
+/scripts/verify-*.sh
+
+# Development files
+.DS_Store
+*.log
+.vscode
+.idea
+
+# Already in .gitignore but being explicit
+/node_modules
+/.next
+/.pnpm-store
+*.tsbuildinfo

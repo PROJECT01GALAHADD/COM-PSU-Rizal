@@ -1,0 +1,93 @@
+{
+  "data": {
+    "user": {
+      "id": "a3afe8d5-9257-4bed-87a3-d70a8516a846",
+      "aud": "authenticated",
+      "role": "authenticated",
+      "email": "student1@psu.edu",
+      "email_confirmed_at": "2025-10-23T03:17:48.101938Z",
+      "phone": "",
+      "confirmed_at": "2025-10-23T03:17:48.101938Z",
+      "last_sign_in_at": "2025-10-23T09:51:05.648604887Z",
+      "app_metadata": {
+        "provider": "email",
+        "providers": [
+          "email"
+        ]
+      },
+      "user_metadata": {
+        "email_verified": true
+      },
+      "identities": [
+        {
+          "identity_id": "a243585f-fca3-4857-ae39-44831ba57a42",
+          "id": "a3afe8d5-9257-4bed-87a3-d70a8516a846",
+          "user_id": "a3afe8d5-9257-4bed-87a3-d70a8516a846",
+          "identity_data": {
+            "email": "student1@psu.edu",
+            "email_verified": false,
+            "phone_verified": false,
+            "sub": "a3afe8d5-9257-4bed-87a3-d70a8516a846"
+          },
+          "provider": "email",
+          "last_sign_in_at": "2025-10-23T03:17:48.099965Z",
+          "created_at": "2025-10-23T03:17:48.10002Z",
+          "updated_at": "2025-10-23T03:17:48.10002Z",
+          "email": "student1@psu.edu"
+        }
+      ],
+      "created_at": "2025-10-23T03:17:48.098959Z",
+      "updated_at": "2025-10-23T09:51:05.704917Z",
+      "is_anonymous": false
+    },
+    "session": {
+      "access_token": "eyJhbGciOiJIUzI1NiIsImtpZCI6IjBvK1JidE5rUHIyWnBiSDciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3hpYXJsdGlhdWNha29qdnZ0dm1pLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJhM2FmZThkNS05MjU3LTRiZWQtODdhMy1kNzBhODUxNmE4NDYiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYxMjE2NjY1LCJpYXQiOjE3NjEyMTMwNjUsImVtYWlsIjoic3R1ZGVudDFAcHN1LmVkdSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWxfdmVyaWZpZWQiOnRydWV9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzYxMjEzMDY1fV0sInNlc3Npb25faWQiOiIwODIwODE0OS02MjBlLTQxOTYtOTIzZi1iNTQ5NDBkNGI5MmQiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.hhxX_8i9YdukxZij6M5-EHqTH1esid9cj12abRzt7sY",
+      "token_type": "bearer",
+      "expires_in": 3600,
+      "expires_at": 1761216665,
+      "refresh_token": "7pmjj2smnmiv",
+      "user": {
+        "id": "a3afe8d5-9257-4bed-87a3-d70a8516a846",
+        "aud": "authenticated",
+        "role": "authenticated",
+        "email": "student1@psu.edu",
+        "email_confirmed_at": "2025-10-23T03:17:48.101938Z",
+        "phone": "",
+        "confirmed_at": "2025-10-23T03:17:48.101938Z",
+        "last_sign_in_at": "2025-10-23T09:51:05.648604887Z",
+        "app_metadata": {
+          "provider": "email",
+          "providers": [
+            "email"
+          ]
+        },
+        "user_metadata": {
+          "email_verified": true
+        },
+        "identities": [
+          {
+            "identity_id": "a243585f-fca3-4857-ae39-44831ba57a42",
+            "id": "a3afe8d5-9257-4bed-87a3-d70a8516a846",
+            "user_id": "a3afe8d5-9257-4bed-87a3-d70a8516a846",
+            "identity_data": {
+              "email": "student1@psu.edu",
+              "email_verified": false,
+              "phone_verified": false,
+              "sub": "a3afe8d5-9257-4bed-87a3-d70a8516a846"
+            },
+            "provider": "email",
+            "last_sign_in_at": "2025-10-23T03:17:48.099965Z",
+            "created_at": "2025-10-23T03:17:48.10002Z",
+            "updated_at": "2025-10-23T03:17:48.10002Z",
+            "email": "student1@psu.edu"
+          }
+        ],
+        "created_at": "2025-10-23T03:17:48.098959Z",
+        "updated_at": "2025-10-23T09:51:05.704917Z",
+        "is_anonymous": false
+      },
+      "weak_password": null
+    }
+  },
+  "error": null
+}

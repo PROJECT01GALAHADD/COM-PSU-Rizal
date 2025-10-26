@@ -1,0 +1,133 @@
+.video-bg-black {
+  background-color: #000;
+}
+.animated-3d {
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+
+/* Meeting background: subtle orange-accented gradient on top of dark base */
+.meeting-bg {
+  /* White base */
+  background-color: #ffffff;
+  /* Layered backgrounds: subtle orange accent + soft black vignette */
+  background-image:
+    linear-gradient(
+      135deg,
+      rgba(255, 148, 50, 0.06),
+      rgba(255, 239, 220, 0.04)
+    ),
+    radial-gradient(
+      ellipse at center,
+      rgba(0, 0, 0, 0.06) 0%,
+      rgba(0, 0, 0, 0.12) 100%
+    );
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+}
+
+/* Centered logo in meeting header; pointer-events none so it doesn't block controls */
+.meeting-header-logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.meeting-header-logo img {
+  width: 36px;
+  height: 36px;
+  opacity: 0.95;
+}
+
+/* Header glass effect used in meeting UI */
+.meeting-header {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
+  backdrop-filter: blur(8px) saturate(120%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Grid wrapper for meetings */
+.meeting-grid {
+  padding: 1rem;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+@media (min-width: 768px) {
+  .meeting-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  .meeting-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Individual video tile styling */
+.video-tile {
+  position: relative;
+  background-color: #0f1724; /* near-gray for tiles */
+  border-radius: 0.75rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 180ms ease;
+  will-change: transform, box-shadow;
+  box-shadow: 0 1px 4px rgba(2, 6, 23, 0.3);
+}
+.video-tile:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.45);
+}
+.video-tile video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.video-tile .placeholder-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 9999px;
+  background: linear-gradient(180deg, #1f2937, #111827);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Floating control group styling */
+.meeting-controls {
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.35);
+}
+
+/* Participant badges and overlays */
+.video-tile .tile-badge {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  color: #fff;
+  font-size: 0.75rem;
+}

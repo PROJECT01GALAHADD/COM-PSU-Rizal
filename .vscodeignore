@@ -1,0 +1,20 @@
+# Ignore template resources
+templates/**
+
+# Ignore other development artifacts
+node_modules/
+.next/
+out/
+build/
+
+# Ignore logs and debug files
+*.log
+*.debug
+
+# Ignore environment files
+.env*
+!.env.example
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db

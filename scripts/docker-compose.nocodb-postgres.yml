@@ -1,0 +1,11 @@
+services:
+  nocodb:
+    environment:
+      # Point NocoDB to the in-compose Postgres service by hostname 'postgres'
+      NC_DB: "postgres://${POSTGRES_USER:-psu}:${POSTGRES_PASSWORD:-psu}@postgres:5432/${POSTGRES_DB:-psu_local}?ssl=false"
+      NC_PUBLIC_URL: "http://localhost:${NOCODB_PORT:-5435}"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "${NOCODB_PORT:-5435}:8080"

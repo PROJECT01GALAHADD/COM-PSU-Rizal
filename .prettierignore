@@ -1,0 +1,13 @@
+# Ignore template resources
+node_modules/
+.next/
+templates/**
+
+# Ignore other generated files
+*.min.js
+*.min.css
+
+# Ignore large files that don't need formatting
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

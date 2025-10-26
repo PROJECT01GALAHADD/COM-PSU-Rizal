@@ -1,0 +1,4 @@
+# Ignore generated and template resources
+node_modules/
+.next/
+templates/**

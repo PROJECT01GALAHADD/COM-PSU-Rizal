@@ -1,0 +1,35 @@
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: v0-COM-PSU-Rizal-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-psu}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-psu}
+      POSTGRES_DB: ${POSTGRES_DB:-psu_local}
+    ports:
+      - '${POSTGRES_PORT:-5438}:5432'
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./scripts/db-init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U $$POSTGRES_USER']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  nocodb:
+    image: nocodb/nocodb:latest
+    container_name: v0-COM-PSU-Rizal-nocodb
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      # By default NocoDB uses SQLite. Use an override file to point to Postgres.
+      NC_PUBLIC_URL: 'http://localhost:${NOCODB_PORT:-5435}'
+    ports:
+      - '${NOCODB_PORT:-5435}:8080'
+
+volumes:
+  pgdata:

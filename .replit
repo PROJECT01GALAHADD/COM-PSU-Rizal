@@ -1,0 +1,61 @@
+run = "pnpm dev"
+entrypoint = "app/page.tsx"
+modules = ["nodejs-20", "postgresql-16", "python-3.11", "nix", "postgresql-17", "typescript-language-server", "web"]
+
+[nix]
+channel = "stable-23_11"
+packages = ["nix", "nixStable"]
+
+[deployment]
+deploymentTarget = "autoscale"
+build = ["pnpm", "run", "build"]
+
+[languages.typescript]
+pattern = "**/{*.ts,*.tsx}"
+syntax = "typescript"
+
+[languages.typescript.languageServer]
+start = "typescript-language-server --stdio"
+
+[[ports]]
+localPort = 3001
+externalPort = 80
+
+[[ports]]
+localPort = 5000
+externalPort = 5000
+
+[[ports]]
+localPort = 37921
+externalPort = 3000
+
+[agent]
+expertMode = true
+integrations = ["twilio:1.0.0"]
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Next.js Dev Server"
+
+[[workflows.workflow]]
+name = "Next.js Dev Server"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "pnpm run dev"
+waitForPort = 5000
+
+[workflows.workflow.metadata]
+outputType = "webview"
+
+[objectStorage]
+defaultBucketID = "replit-objstore-61995920-41b9-4a43-96eb-c5f4d54b2f81"

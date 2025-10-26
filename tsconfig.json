@@ -1,0 +1,63 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+    "forceConsistentCasingInFileNames": true,
+    "maxNodeModuleJsDepth": 0,
+    "disableSizeLimit": true,
+    "preserveWatchOutput": true,
+    "assumeChangesOnlyAffectDirectDependencies": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "app/**/*",
+    "components/**/*",
+    "lib/**/*",
+    "hooks/**/*",
+    "types/**/*",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "templates/**",
+    "drizzle.config.ts",
+    "**/node_modules/**",
+    "**/.next/**",
+    "**/out/**",
+    "**/build/**",
+    "**/dist/**",
+    "database/**",
+    "scripts/**",
+    // Temporary excludes to focus on auth/login flows
+    "app/admin/page.tsx",
+    "app/checkout/page.tsx",
+    "components/examples-dialog.tsx",
+    "components/auth/template/**",
+    "components/dashboard/admin/cmsfullform/**",
+    "components/dashboard/admin/plugins/**"
+  ]
+}
